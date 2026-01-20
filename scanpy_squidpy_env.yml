@@ -1,0 +1,50 @@
+name: scanpy_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+
+  # Core Scanpy stack
+  - scanpy
+  - anndata
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - umap-learn
+  - numba
+
+  # Graph / clustering (explicit in your PPT)
+  - python-igraph
+  - leidenalg
+
+  # Plotting
+  - matplotlib
+  - seaborn
+
+  # Spatial
+  - squidpy
+  - spatialdata  # useful for newer spatial ecosystems (kept optional-ish but safe)
+
+  # IO / formats commonly encountered
+  - h5py
+  - pytables
+  - pyarrow
+  - zarr
+  - tifffile
+
+  # Image utilities that Squidpy can leverage
+  - scikit-image
+
+  # Jupyter
+  - jupyterlab
+  - ipykernel
+
+  # Quality-of-life
+  - tqdm
+  - pip
+
+  # Pip-only items (kept minimal)
+  - pip:
+      - decoupler
+      - liana
